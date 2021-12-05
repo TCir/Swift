@@ -2,7 +2,7 @@
 //  FindMyApp.swift
 //  FindMy
 //
-//  Created by Daniel Swift on 11/04/2021.
+//  Created by ThiagoValentim on 11/04/2021.
 //
 
 import SwiftUI
