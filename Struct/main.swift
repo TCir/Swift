@@ -57,7 +57,7 @@ print("A cor da sala na casa de Thiago é \(casaThiago.corSala)")
 print("A cor da sala na casa do Amigo é \(casaAmigo.corSala)")
 
 
-// Portanto, devo lembrar.
+// Portanto, devo lembrar:
 // Struct -> não preciso fazer o init(para ter o construtor)
 //        -> apos fazer referência entre as strtucts A e B, terei a igualdade das caracteristicas entre eles, porém as alterações que fizer em uma struct A não serão atribuidos a  struct B e vice-versa, diferentemente das Classes.
 
