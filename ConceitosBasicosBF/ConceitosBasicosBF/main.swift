@@ -65,7 +65,7 @@ print(fraseResultado)
 
 
 
-//_______________________________________________________________
+print("_______________________________________________________________")
 
 // Exercício 01
 
@@ -86,6 +86,8 @@ print("A soma entre \(umNumeroA) e \(umNumeroB) será: \(somaAeB)")
 var diferencaAeB:Double = Double(umNumeroA) - umNumeroB
 print("A diferença entre \(umNumeroA) e \(umNumeroB) será: \(diferencaAeB)")
 
+print("_______________________________________________________________")
+
 // Exercício 02
 var dias:Int = 365
 var horas:Int = 24
@@ -93,14 +95,19 @@ var segundoshora:Int = 3600
 var segundosAno: Int = dias * horas * segundoshora
 print("Um ano tem \(segundosAno) segundos")
 
+print("_______________________________________________________________")
 
 // Exercicio 03
+// Convertendo uma Int, Float e Double em String.
+var numeroInteiro:String = String(inteiro)
+var numeroflutuante:String = String(flutuante)
+var numeroDoub:String = String(doub)
 
 // Letra A
 var inteiro:Int = 20
-print("A variavel inteiro é: \(inteiro)")
+print("A variavel inteiro é: \(inteiro) ")
 
-// Letra B
+// Letra
 var flutuante:Float = 3.1458
 print("A variavel float é: \(flutuante)")
 
@@ -108,4 +115,100 @@ print("A variavel float é: \(flutuante)")
 var doub:Double = 5.14
 print("A variavel double é: \(doub)")
 
+print("_______________________________________________________________")
+
+// Funções // Métodos
+// let é sempre mais utilizada por não aceitar ser alterada no decorrer de uma atividade. Caso precise alterar aquele valor, o proprio Xcode irá me indicar que aquela variável é uma "constante" e não pode ser alterada. Caso eu precise alterar ela, o basta dar um 'fix'.
+
+// Uma função é um bloco de códgo que realiza uma rarefa em específico. Permite encpasular código e realiza-lo diversas vezes.
+
+// Estrutura de uma Função/Método
+// Primeiro: inicia com o comando 'func'
+// Segundo: o nome da função
+// Logo apos o nome deve vim parenteses () -> aqui dentro terá ou não seus parámetros
+// Terceira: abre e fecha as chaves {} -> aqui dentro terá tudo que deve ser feito dentro da função.
+// Quarta: precisa ser criado a 'CHAMADA' da função. ex: exibirNome() -> neste momento irá ser apresentado tudo que estiver dentro da função.
+// Este tipo de função não armazena valor
+
+// Função SEM RETORNO e Sem Parâmetro
+func exibirNome(){
+    print("Cara, a função esta funcionando!!")
+    
+}
+
+exibirNome() // Quantas vezes eu chamar a função, tantas vezes esta função irá ser chamada.
+// chamando a função 4x ela será chamada 4x e irá executar o que estiver contido nela 4x.
+exibirNome()
+exibirNome()
+exibirNome()
+exibirNome()
+
+
+//NÃO POSSO CRIAR UMA FUNÇÃO DENTRO DE OUTRA FUNÇÃO. MAS POSSO EXECUTAR UMA FUNÇÃO DENTRO DE OUTRA FUNÇÃO.
+
+func segundaFuncao(){
+    print("A segundaFunção esta funcionando!! Embaixo vai chamar ExibirNome.")
+    exibirNome()
+}
+
+segundaFuncao()
+
+func chamaFuncaoExibirNome(){
+    print("A função chamaFuncaoExibirNome esta funcionando!! Embaixo vai chamar ExibirNome")
+    exibirNome()
+}
+
+chamaFuncaoExibirNome()
+
+
+print("_______________________________________________________________")
+
+
+// Função SEM RETORNO e COM Parâmetro
+//
+func mostrarAsubtracaoDoValor(valor1:Int,valor2:Int){
+    print(valor1 - valor2)
+}
+
+mostrarAsubtracaoDoValor(valor1: 124, valor2: 78)
+
+
+// Criando uma funçao/método COM Retorno SEM PARAMETROS
+//
+// Criado uma variável do tipo String com um certo valor
+var completeName:String = "Thiago C V Ribeiro"
+// Criado uma funcao s/parametro, tendo um retorno do tipo string
+func trazerTextoVariaveis()-> String{
+    return completeName
+}
+// pedindo para mostrar o que esta retornando no método
+print(trazerTextoVariaveis())
+
+
+// Função sem retorno e sem parametro é utilizado para operações iniciais de um projeto. Onde não precisa retornar e nem receber nada.
+
+
+print("_______________________________________________________________")
+// Questão 01
+// Criar uma função com o nome 'soma' que tenha 3 parametros (valor1:Int,valor2:Int,valor3:Int) e que ela faça uma soma entre os valores e quero e quero um retorno sob o valor total.
+
+func somaAi(valor1:Int,valor2:Int,valor3:Int)->Int{
+    return  valor1 + valor2 + valor3
+}
+// Chamando a função dentro do print, neste momento já adiciono os valores
+print(somaAi(valor1: 12, valor2: 74, valor3: 94))
+
+
+print("_______________________________________________________________")
+
+// Questão 02
+// Crie uma função onde exiba na área de debug uma seguinte frase "Olá Mundo, estou apresendo a criar minhas primeiras funções".
+
+func hello(){
+    print("Olá Mundo, estou aprendendo a criar minhas primeiras funções")
+}
+hello()
+
+
+print("_______________________________________________________________")
 
