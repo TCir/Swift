@@ -33,6 +33,12 @@ print(diasDaSemana.count)
 // Para Descobrir se a lista esta vazia
 print(diasDaSemana.isEmpty)  // dará: False se estiver cheia, e True se estiver fazia.
 
+if diasDaSemana.isEmpty{
+    print("Essa semana não começou.")
+} else {
+    print("Essa semana tem \(diasDaSemana.count) dias.")
+}
+
 //Como remover um item da lista
 // Quando abrimos o .remove => abre uma série de opções das várias possibilidades que posso remover
 diasDaSemana.remove(at: 4) // é retirado a "a sexta" e o sábado cai para a posição dela
@@ -87,3 +93,38 @@ print(nota)
 nota.updateValue("Mudança de valor apenas", forKey: 2)
 print(nota)
 
+
+// Utilizando Array, implementando um for para percorrer o Array
+// Criando variaveis com valores quaisquer
+var idade0:Int = 15
+var idade1:Int = 18
+var idade2:Int = 75
+var idade3:Int = 33
+var idade4:Int = 30
+var idade5:Int = 20
+var idade6:Int = 16
+var idade7:Int = 12
+
+// Criando um array com todas as idades
+var idadePermitida:[Int] = [idade0,idade1,idade2,idade3,idade4,idade5,idade6,idade7]
+// testando se vai ser percorrido todos os valores
+// o 'value'recebe o valor de cada variavel idade
+// o for ira continuar quantas vezes existir item no array
+for value in idadePermitida{
+    print(value)
+}
+// Criando condições para apresentar os valores
+var naoEntrou:Int = 0
+var entrou:Int = 0
+for value1 in idadePermitida{
+   
+    if value1 >= 18 {
+        entrou += 1 // Contando quantas pessoas entregaram
+    }else
+    {
+        naoEntrou += 1
+//        print("Voce não tem permição para entrar sozinho.")
+    }
+}
+print("Temos um total de \(entrou) pessoas dentro da sala.")
+print("\(naoEntrou) pessoas não puderam entrar na sala.")
