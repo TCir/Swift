@@ -9,14 +9,14 @@ func luckCalculator(){
     
     if luckNumber ==  1 {
         print("Este número quase nunca cai, número 1.")
-    }else if luckNumber <= 50 {
-        print("Ainda nem passou de 50.")
-    }else if luckNumber <= 450 {
-        print("Esta quase chegando na metade.")
-    }else if  luckNumber <= 800 {
-        print("Este intevalo é bom.")
+    }else if luckNumber <= 99{
+        print("Ainda nem passou de 100.")
+    }else if luckNumber >= 100 && luckNumber <= 499 {
+        print("Esta no caminho da metade.")
+    }else if  luckNumber >= 500 && luckNumber <= 999 {
+        print("Você passou da metade, esta quase.")
     }else {
-        print("Você esta acima de 800")
+        print("Você acertou os 1%")
     }
 
 }
